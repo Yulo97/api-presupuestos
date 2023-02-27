@@ -1,0 +1,32 @@
+### 
+GET http://localhost:9000/api/clientes HTTP/1.1
+
+###
+POST http://localhost:9000/api/clientes/nuevo-cliente HTTP/1.1
+Content-Type: application/json
+
+{
+    "clienteNombre": "Estala Bainotti",
+    "clienteEmail": "estelabaunitu@gmail.com",
+    "clienteTelefono": "4626859",
+    "clienteDni": 546497,
+    "empresaID": 1
+}
+
+###
+POST http://localhost:9000/api/productos/agregar-producto HTTP/1.1
+Content-Type: application/json
+
+{
+    "productoNombre": "Destornillador",
+    "productoPrecio": 400,
+    "productoCodigo": "kljadkjad645564asda",
+    "empresaID": 1
+}
+###
+
+DELETE http://localhost:9000/api/eliminar-producto/2 HTTP/1.1
+
+###
+
+GET http://localhost:9000/api/sesion/iniciar-sesion?user=Yulo97&pass=Giuli153064343 HTTP/1.1
