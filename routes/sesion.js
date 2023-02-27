@@ -3,7 +3,8 @@ const { connection } = require('../conexion/db.js');
 const routerSesion = express.Router()
 
 routerSesion.get('/iniciar-sesion', (req, res) => {
-    const { user, pass } = req.body;
+    const user = req.query.user;
+    const pass = req.query.pass;
 
     connection.query(`call SP_INICIAR_SESION('${user}', '${pass}')`, (error, results) => { //SP
         if (error) throw error;
